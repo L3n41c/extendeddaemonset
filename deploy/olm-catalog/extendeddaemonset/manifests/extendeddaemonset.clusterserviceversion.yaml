@@ -4,7 +4,7 @@ metadata:
   annotations:
     alm-examples: '[]'
     capabilities: Basic Install
-  name: extendeddaemonset.v0.1.0
+  name: extendeddaemonset.v0.0.42-rc1
   namespace: placeholder
 spec:
   apiservicedefinitions: {}
@@ -75,8 +75,8 @@ spec:
                       fieldPath: metadata.name
                 - name: OPERATOR_NAME
                   value: extendeddaemonset
-                image: l3n41c/extendeddaemonset:latest
-                imagePullPolicy: Always
+                image: datadog/extendeddaemonset:v0.0.42-rc1
+                imagePullPolicy: IfNotPresent
                 name: extendeddaemonset
                 resources: {}
               serviceAccountName: extendeddaemonset
@@ -154,4 +154,5 @@ spec:
   maturity: alpha
   provider:
     name: Datadog
-  version: 0.1.0
+  replaces: extendeddaemonset.v0.1.0
+  version: 0.0.42-rc1
