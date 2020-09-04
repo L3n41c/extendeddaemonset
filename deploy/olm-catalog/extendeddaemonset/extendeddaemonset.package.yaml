@@ -1,7 +1,7 @@
 channels:
 - currentCSV: extendeddaemonset.v0.1.0
   name: beta
-- currentCSV: extendeddaemonset.v42.0.0-rc.6
+- currentCSV: extendeddaemonset.v42.0.0-rc.7
   name: test
 defaultChannel: beta
 packageName: extendeddaemonset
