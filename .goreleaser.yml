@@ -13,6 +13,8 @@ archives:
   builds:
   - kubectl-eds
   name_template: "kubectl-eds_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+  wrap_in_directory: false
+  format: zip
   files:
   - LICENSE
 checksum:
