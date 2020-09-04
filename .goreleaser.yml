@@ -4,6 +4,10 @@ before:
     - go generate ./...
 builds:
 - id: kubectl-eds
+  goos:
+  - linux
+  - darwin
+  - windows
   env:
   - CGO_ENABLED=0
   main: ./cmd/kubectl-eds/main.go
@@ -11,10 +15,6 @@ builds:
   binary: kubectl-eds
 archives:
 - id: kubectl-eds
-  goos:
-  - linux
-  - darwin
-  - windows
   builds:
   - kubectl-eds
   name_template: "kubectl-eds_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
