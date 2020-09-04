@@ -8,6 +8,8 @@ builds:
   - linux
   - darwin
   - windows
+  goarch:
+  - amd64
   env:
   - CGO_ENABLED=0
   main: ./cmd/kubectl-eds/main.go
