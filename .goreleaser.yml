@@ -9,12 +9,12 @@ builds:
   ldflags: -w -X ${BUILDINFOPKG}.Tag=${TAG} -X ${BUILDINFOPKG}.Commit=${GIT_COMMIT} -X ${BUILDINFOPKG}.Version=${VERSION} -X ${BUILDINFOPKG}.BuildTime=${DATE} -s
   binary: kubectl-eds
 archives:
-- replacements:
-    darwin: Darwin
-    linux: Linux
-    windows: Windows
-    386: i386
-    amd64: x86_64
+- id: kubectl-eds
+  builds:
+  - kubectl-eds
+  name_template: "kubectl-eds_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+  files:
+  - LICENSE
 checksum:
   name_template: 'checksums.txt'
 snapshot:
