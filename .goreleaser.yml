@@ -11,6 +11,10 @@ builds:
   binary: kubectl-eds
 archives:
 - id: kubectl-eds
+  goos:
+  - linux
+  - darwin
+  - windows
   builds:
   - kubectl-eds
   name_template: "kubectl-eds_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
