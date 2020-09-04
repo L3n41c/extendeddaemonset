@@ -18,7 +18,7 @@ spec:
         effect: NoSchedule
       containers:
       - name: extendeddaemonset
-        image: datadog/extendeddaemonset:v42.0.0-rc.7
+        image: datadog/extendeddaemonset:v42.0.0-rc.8
         imagePullPolicy: IfNotPresent
         command:
         - extendeddaemonset

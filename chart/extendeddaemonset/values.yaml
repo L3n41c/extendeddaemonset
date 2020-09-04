@@ -5,7 +5,7 @@
 replicaCount: 1
 image:
   repository: datadog/extendeddaemonset
-  tag: v42.0.0-rc.7
+  tag: v42.0.0-rc.8
   pullPolicy: IfNotPresent
 imagePullSecrets: []
 nameOverride: ""
